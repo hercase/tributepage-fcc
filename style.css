@@ -1,0 +1,247 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,800;1,300&display=swap");
+
+:root {
+  --color-primary: #ed1d24;
+  --color-light: #edf2f4;
+  --color-dark: #2b2d42;
+  --color-darker: #03071e;
+  --max-width: 1200px;
+  --container-padding: 2rem 2rem 0 2rem;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--color-dark);
+  background-color: var(--color-light);
+  font-family: "Open Sans", sans-serif;
+  background: linear-gradient(
+    0deg,
+    rgba(43, 45, 66, 0.2),
+    rgba(255, 0, 0, 0) 50%
+  );
+  transition: 0.4s all;
+}
+
+#main {
+  display: grid;
+  grid-template-rows: 150px 500px auto auto auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--color-dark);
+  padding: 2rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  width: 100%;
+}
+
+.logo {
+  text-align: center;
+}
+
+.logo h1 {
+  letter-spacing: 0.4rem;
+  color: var(--color-dark);
+  text-shadow: 1px 1px 3px rgb(0 0 0 / 17%);
+}
+
+.logo h3 {
+  color: var(--color-primary);
+  letter-spacing: -1px;
+  font-weight: 300;
+  line-height: 10px;
+}
+
+.tribute__cover {
+  padding: var(--container-padding);
+  position: relative;
+  background-image: url("https://imagizer.imageshack.com/img922/9859/kWuDU5.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.tribute__container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.tribute__cover p {
+  text-align: center;
+  max-width: var(--max-width);
+  color: var(--color-light);
+  font-size: 1.5rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+
+#tribute-info {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--container-padding);
+  text-align: justify;
+}
+
+.comics {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--container-padding);
+}
+
+.comics__title {
+  margin: 1rem 0;
+  font-size: 1.2rem;
+  color: var(--color-primary);
+}
+
+.comics ul {
+  font-size: 0.95rem;
+  column-count: 2;
+}
+
+.comics li {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/29841/arrow.png")
+    0 50% no-repeat;
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/29841/arrow.svg")
+    0 50% no-repeat;
+  list-style-type: none;
+  padding-left: 1.1rem;
+  margin-bottom: 5px;
+  color: var(--color-dark);
+}
+
+.footer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  background-color: var(--color-dark);
+  background-image: url(https://i.annihil.us/u/prod/marvel/choosemarvelquiz/images/site_bg.jpg);
+  background-size: cover;
+  background-blend-mode: soft-light;
+  background-position-y: bottom;
+  background-attachment: fixed;
+}
+
+.footer::before {
+  position: absolute;
+  content: "";
+  width: 90px;
+  height: 90px;
+  background-image: url("https://imagizer.imageshack.com/img923/5498/zTQsAV.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  bottom: 1.5rem;
+  left: 100;
+}
+
+.footer a {
+  font-weight: 500;
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.footer p {
+  flex: 1;
+  text-align: center;
+  color: var(--color-light);
+}
+
+#img-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#image {
+  display: block;
+  max-width: 90%;
+  width: 150px;
+  height: auto;
+  filter: brightness(10);
+}
+
+#img-caption {
+  opacity: 0.5;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.footer__container {
+  width: 100%;
+  max-width: var(--max-width);
+  padding: 2rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__copyright {
+  opacity: 0.9;
+  padding: 0.5rem 0;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--color-light);
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+@media (max-width: 769px) {
+  #main {
+    display: grid;
+    grid-template-rows: 150px 400px auto auto auto;
+  }
+
+  .header {
+    justify-content: center;
+    font-size: 1.1rem;
+  }
+
+  .tribute__container p {
+    font-size: 1.3rem;
+  }
+
+  #tribute-info {
+    font-size: 0.9rem;
+  }
+
+  .comics ul {
+    column-count: 1;
+  }
+
+  .footer__container {
+    flex-direction: column;
+  }
+
+  #image {
+    width: 120px;
+  }
+
+  .footer__text {
+    width: 90%;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .footer__copyright {
+    opacity: 0.8;
+    font-size: 0.7rem;
+  }
+}
